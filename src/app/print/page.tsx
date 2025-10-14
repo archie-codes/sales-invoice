@@ -742,14 +742,14 @@ export default function PrintInvoicePage() {
         {/* ======= DATE ======= */}
         <div
           className="absolute text-[12px]"
-          style={{ top: "158.7mm", left: "173mm" }}
+          style={{ top: "158.7mm", left: "174mm" }}
         >
           <span>{date ? format(new Date(date), "MMMM dd, yyyy") : ""}</span>
         </div>
 
         {/* ======= SOLD TO SECTION ======= */}
         <div
-          className="absolute text-[12px]"
+          className="absolute text-[11.5px]"
           style={{
             top: "170mm",
             left: "155mm",
@@ -770,12 +770,12 @@ export default function PrintInvoicePage() {
         {/* ======= ITEMS ======= */}
         <div
           className="absolute text-[12px]"
-          style={{ top: "192.7mm", left: "163mm", width: "85mm" }}
+          style={{ top: "192.7mm", left: "165mm", width: "85mm" }}
         >
           {items.map((item, i) => (
             <div
               key={i}
-              className="flex font-extrabold text-[9px]"
+              className="flex font-extrabold text-[10px]"
               style={{ marginBottom: "0.5mm" }}
             >
               <div style={{ width: "10mm", textAlign: "right" }}>
@@ -796,9 +796,9 @@ export default function PrintInvoicePage() {
           className="absolute font-extrabold text-[9px]"
           style={{
             top: "221.7mm",
-            left: "171mm",
+            left: "172mm",
             width: "60mm",
-            fontSize: "9px",
+            fontSize: "10px",
             lineHeight: "4.3mm",
           }}
         >
