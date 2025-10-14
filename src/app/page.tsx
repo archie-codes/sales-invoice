@@ -387,7 +387,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
-import { Textarea } from "@/components/ui/textarea"
+import { Textarea } from "@/components/ui/textarea";
 import { format } from "date-fns";
 import { useInvoiceStore } from "@/lib/invoiceStore";
 import { cn } from "@/lib/utils";
@@ -578,11 +578,42 @@ export default function InvoiceInputPage() {
                   .replace(/([A-Z])/g, " $1")
                   .replace(/^./, (str) => str.toUpperCase())}
               </Label>
+
               <Input
                 type="text"
-                value={formattedValue}
-                disabled
-                className="bg-gray-100 cursor-not-allowed text-right font-medium"
+                defaultValue={formattedValue}
+                className="bg-white border text-right font-medium focus:ring-2 focus:ring-blue-400"
+                onFocus={(e) => {
+                  // remove commas while editing
+                  e.target.value = value ? value.replace(/,/g, "") : "";
+                }}
+                onChange={(e) => {
+                  const inputValue = e.target.value.replace(/,/g, "");
+                  if (!isNaN(Number(inputValue))) {
+                    useInvoiceStore.setState((state) => ({
+                      totals: {
+                        ...state.totals,
+                        [key]: inputValue,
+                      },
+                    }));
+                  }
+                }}
+                onBlur={(e) => {
+                  const num = parseFloat(e.target.value);
+                  if (!isNaN(num)) {
+                    const formatted = num.toLocaleString("en-US", {
+                      minimumFractionDigits: 2,
+                      maximumFractionDigits: 2,
+                    });
+                    e.target.value = formatted;
+                    useInvoiceStore.setState((state) => ({
+                      totals: {
+                        ...state.totals,
+                        [key]: formatted,
+                      },
+                    }));
+                  }
+                }}
               />
             </div>
           );

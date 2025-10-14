@@ -742,7 +742,7 @@ export default function PrintInvoicePage() {
         {/* ======= DATE ======= */}
         <div
           className="absolute text-[12px]"
-          style={{ top: "158mm", left: "173mm" }}
+          style={{ top: "158.7mm", left: "173mm" }}
         >
           <span>{date ? format(new Date(date), "MMMM dd, yyyy") : ""}</span>
         </div>
@@ -751,7 +751,7 @@ export default function PrintInvoicePage() {
         <div
           className="absolute text-[12px]"
           style={{
-            top: "169.5mm",
+            top: "170mm",
             left: "155mm",
             width: "75mm",
             lineHeight: "4.8mm",
@@ -770,7 +770,7 @@ export default function PrintInvoicePage() {
         {/* ======= ITEMS ======= */}
         <div
           className="absolute text-[12px]"
-          style={{ top: "191.9mm", left: "163mm", width: "85mm" }}
+          style={{ top: "192.7mm", left: "163mm", width: "85mm" }}
         >
           {items.map((item, i) => (
             <div
@@ -795,7 +795,7 @@ export default function PrintInvoicePage() {
         <div
           className="absolute font-extrabold text-[9px]"
           style={{
-            top: "221.5mm",
+            top: "221.7mm",
             left: "171mm",
             width: "60mm",
             fontSize: "9px",
@@ -817,9 +817,10 @@ export default function PrintInvoicePage() {
           <div className="flex justify-center">
             <span>{totals.addVat || "n/a"}</span>
           </div>
-          <div className="flex justify-center">
-            <span>{totals.withholding || "n/a"}</span>
+          <div className="flex justify-center text-center whitespace-pre-line">
+            <span>{totals.withholding ? totals.withholding : "\n"}</span>
           </div>
+
           <div className="flex justify-center font-extrabold">
             <span>{totals.totalDue || "n/a"}</span>
           </div>
