@@ -802,27 +802,27 @@ export default function PrintInvoicePage() {
             lineHeight: "4.3mm",
           }}
         >
-          <div className="flex justify-center">
-            <span className="text-white">{totals.totalSales || "n/a"}</span>
+          <div className="flex justify-center text-center whitespace-pre-line">
+            <span>{totals.totalSales ? totals.totalSales : "\n"}</span>
           </div>
-          <div className="flex justify-center">
-            <span className="text-white">{totals.lessVat || "n/a"}</span>
+          <div className="flex justify-center text-center whitespace-pre-line">
+            <span>{totals.lessVat ? totals.lessVat : "\n"}</span>
           </div>
-          <div className="flex justify-center">
-            <span>{totals.netVat || "n/a"}</span>
+          <div className="flex justify-center text-center whitespace-pre-line">
+            <span>{totals.netVat ? totals.netVat : "\n"}</span>
           </div>
-          <div className="flex justify-center">
-            <span className="text-white">{totals.discount || "n/a"}</span>
+          <div className="flex justify-center text-center whitespace-pre-line">
+            <span>{totals.discount ? totals.discount : "\n"}</span>
           </div>
-          <div className="flex justify-center">
-            <span>{totals.addVat || "n/a"}</span>
+          <div className="flex justify-center text-center whitespace-pre-line">
+            <span>{totals.addVat ? totals.addVat : "\n"}</span>
           </div>
           <div className="flex justify-center text-center whitespace-pre-line">
             <span>{totals.withholding ? totals.withholding : "\n"}</span>
           </div>
 
-          <div className="flex justify-center font-extrabold">
-            <span>{totals.totalDue || "n/a"}</span>
+          <div className="flex justify-center font-extrabold text-center whitespace-pre-line">
+            <span>{totals.totalDue ? totals.totalDue : "\n"}</span>
           </div>
         </div>
       </div>
