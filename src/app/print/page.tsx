@@ -784,7 +784,7 @@ export default function PrintInvoicePage() {
               <div style={{ width: "13mm", textAlign: "right" }}>
                 {item.price}
               </div>
-              <div style={{ width: "20mm", textAlign: "right" }}>
+              <div style={{ width: "20.6mm", textAlign: "right" }}>
                 {item.amount}
               </div>
             </div>
