@@ -761,7 +761,7 @@ export default function PrintInvoicePage() {
           <div>{tin}</div>
 
           {(business || "").split(/\r?\n/).map((line, idx) => (
-            <div key={idx} className="m-0 p-0 leading-[4mm]">
+            <div key={idx} className="m-0 p-0 leading-[3.5mm]">
               {line}
             </div>
           ))}
