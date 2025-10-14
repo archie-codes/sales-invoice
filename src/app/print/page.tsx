@@ -692,7 +692,7 @@ export default function PrintInvoicePage() {
           width: "8.5in",
           height: "11in",
           position: "relative",
-          backgroundImage: showBg ? `url("/invoice-template3.jpg")` : "none", // ✅ toggle background
+          backgroundImage: showBg ? `url("/invoice-template4.jpg")` : "none", // ✅ toggle background
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
           backgroundPosition: "right bottom",
@@ -742,7 +742,7 @@ export default function PrintInvoicePage() {
         {/* ======= DATE ======= */}
         <div
           className="absolute text-[12px]"
-          style={{ top: "161.4mm", left: "173mm" }}
+          style={{ top: "158mm", left: "173mm" }}
         >
           <span>{date ? format(new Date(date), "MMMM dd, yyyy") : ""}</span>
         </div>
@@ -751,8 +751,8 @@ export default function PrintInvoicePage() {
         <div
           className="absolute text-[12px]"
           style={{
-            top: "172.5mm",
-            left: "150mm",
+            top: "169.5mm",
+            left: "155mm",
             width: "75mm",
             lineHeight: "4.8mm",
           }}
@@ -770,7 +770,7 @@ export default function PrintInvoicePage() {
         {/* ======= ITEMS ======= */}
         <div
           className="absolute text-[12px]"
-          style={{ top: "195.5mm", left: "160mm", width: "85mm" }}
+          style={{ top: "191.9mm", left: "163mm", width: "85mm" }}
         >
           {items.map((item, i) => (
             <div
@@ -795,8 +795,8 @@ export default function PrintInvoicePage() {
         <div
           className="absolute font-extrabold text-[9px]"
           style={{
-            top: "224.5mm",
-            left: "167mm",
+            top: "221.5mm",
+            left: "171mm",
             width: "60mm",
             fontSize: "9px",
             lineHeight: "4.3mm",
