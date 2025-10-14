@@ -818,7 +818,7 @@ export default function PrintInvoicePage() {
             <span>{totals.addVat || "n/a"}</span>
           </div>
           <div className="flex justify-center">
-            <span className="text-white">{totals.withholding || "n/a"}</span>
+            <span>{totals.withholding || "n/a"}</span>
           </div>
           <div className="flex justify-center font-extrabold">
             <span>{totals.totalDue || "n/a"}</span>
