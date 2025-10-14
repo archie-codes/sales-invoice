@@ -415,9 +415,9 @@ export default function InvoiceInputPage() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4 space-y-4">
+    <div className="max-w-2xl mx-auto mt-5 mb-5 p-4 rounded-2xl border-2 border-gray-300 space-y-4 shadow-2xl">
       <h1 className="text-xl font-bold mb-4 text-center">SALES INVOICE</h1>
-
+      <hr />
       {/* Header fields */}
       <div className="space-y-2">
         {/* Date Field */}

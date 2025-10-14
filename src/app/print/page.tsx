@@ -322,7 +322,7 @@
 //           </div>
 //         </div>
 //       </div>
-//       {/* 
+//       {/*
 //       <Button onClick={handlePrint} className="mt-4">
 //         <Printer />
 //         Print Now
@@ -330,7 +330,6 @@
 //     </div>
 //   );
 // }
-
 
 // "use client";
 
@@ -655,6 +654,8 @@
 import { useState } from "react"; // ✅ added
 import { useInvoiceStore } from "@/lib/invoiceStore";
 import { format } from "date-fns";
+import { Button } from "@/components/ui/button";
+import { Eye, EyeOff, RotateCcw } from "lucide-react";
 
 export default function PrintInvoicePage() {
   const { date, name, tin, business, items, totals } = useInvoiceStore();
@@ -663,22 +664,25 @@ export default function PrintInvoicePage() {
   const [showBg, setShowBg] = useState(true); // ✅ for hide/unhide background
 
   return (
-    <div className="flex flex-col items-center p-4 bg-gray-100 min-h-screen font-extrabold">
+    <div className="flex flex-col items-center p-4 min-h-screen font-extrabold">
       {/* ✅ Control Buttons */}
       <div className="flex gap-2 mb-3 no-print">
-        <button
+        <Button
           onClick={() => setRotated((prev) => !prev)}
-          className="px-3 py-1 bg-blue-600 text-white rounded"
+          className="px-3 py-1"
+          variant="outline"
         >
+          <RotateCcw />
           {rotated ? "Unrotate" : "Rotate 180°"}
-        </button>
+        </Button>
 
-        <button
+        <Button
           onClick={() => setShowBg((prev) => !prev)}
-          className="px-3 py-1 bg-gray-700 text-white rounded"
+          className="px-3 py-1"
         >
+          {showBg ? <EyeOff /> : <Eye />}
           {showBg ? "Hide Picture" : "Show Picture"}
-        </button>
+        </Button>
       </div>
 
       {/* Full-page container (Letter size) */}
@@ -688,9 +692,7 @@ export default function PrintInvoicePage() {
           width: "8.5in",
           height: "11in",
           position: "relative",
-          backgroundImage: showBg
-            ? `url("/invoice-template3.jpg")`
-            : "none", // ✅ toggle background
+          backgroundImage: showBg ? `url("/invoice-template3.jpg")` : "none", // ✅ toggle background
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
           backgroundPosition: "right bottom",
