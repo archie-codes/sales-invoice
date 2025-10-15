@@ -485,7 +485,7 @@ export default function InvoiceInputPage() {
                         defaultValue={formattedValue}
                         className={cn(
                           "text-right font-semibold tabular-nums transition-all focus:ring-2 focus:ring-slate-400",
-                          isTotal ? "bg-slate-700 text-white text-lg border-slate-700" : "bg-white",
+                          isTotal ? "bg-slate-200 text-black/90 border-slate-200" : "bg-white",
                         )}
                         onFocus={(e) => {
                           e.target.value = value ? value.replace(/,/g, "") : ""
