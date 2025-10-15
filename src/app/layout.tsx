@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Invoice Printer",
+  title: "RBP Sales Invoice",
   description: "Print overlay for pre-printed invoice sheet",
 };
 

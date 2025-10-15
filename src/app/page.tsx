@@ -287,11 +287,11 @@ export default function InvoiceInputPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-8 px-4">
       <div className="mx-auto max-w-4xl">
         <Card className="shadow-xl border-slate-200">
-          <CardHeader className="border-b bg-gradient-to-r text-black/80">
+          <CardHeader className="border-b text-black/80">
             <CardTitle className="text-center text-3xl font-bold tracking-tight">SALES INVOICE</CardTitle>
           </CardHeader>
 
-          <CardContent className="space-y-8 pt-8">
+          <CardContent className="space-y-8 pt-5">
             <div className="space-y-6">
               <div className="grid gap-6 md:grid-cols-2">
                 {/* Date Field */}
@@ -337,7 +337,7 @@ export default function InvoiceInputPage() {
                     value={tin}
                     onChange={(e) => setField("tin", e.target.value)}
                     placeholder="e.g. 123-456-789-000"
-                    className="transition-all focus:ring-2 focus:ring-slate-400"
+                    className="font-medium transition-all focus:ring-2 focus:ring-slate-400"
                   />
                 </div>
               </div>
@@ -366,7 +366,7 @@ export default function InvoiceInputPage() {
                   value={business}
                   onChange={(e) => setField("business", e.target.value)}
                   placeholder="Enter complete business address"
-                  className="resize-none transition-all focus:ring-2 focus:ring-slate-400"
+                  className="font-medium resize-none transition-all focus:ring-2 focus:ring-slate-400"
                   rows={2}
                 />
               </div>
