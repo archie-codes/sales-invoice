@@ -287,7 +287,7 @@ export default function InvoiceInputPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-8 px-4">
       <div className="mx-auto max-w-4xl">
         <Card className="shadow-xl border-slate-200">
-          <CardHeader className="border-b bg-gradient-to-r from-slate-700 to-slate-500 text-white">
+          <CardHeader className="border-b bg-gradient-to-r text-black/80">
             <CardTitle className="text-center text-3xl font-bold tracking-tight">SALES INVOICE</CardTitle>
           </CardHeader>
 
